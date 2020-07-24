@@ -1,13 +1,17 @@
 {
-  "name": "app",
+  "name": "editorconfig-eslint-prettier",
   "version": "1.0.0",
-  "description": "",
+  "description": "Created to demonstrate how to configure the EditorConfig Eslint and Prettier",
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "editorconfig",
+    "eslint",
+    "prettier"
+  ],
+  "author": "Thiago Franchin",
   "license": "ISC",
   "dependencies": {
     "eslint": "^7.5.0"
