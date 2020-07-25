@@ -4,7 +4,7 @@
   "description": "Created to demonstrate how to configure the EditorConfig Eslint and Prettier",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint"
+    "lint": "./node_modules/.bin/eslint src --max-warnings=0"
   },
   "keywords": [
     "editorconfig",
@@ -16,9 +16,19 @@
   "dependencies": {
     "eslint": "^7.5.0"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*": ["yarn lint --fix"]
+  },
   "devDependencies": {
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5"
   }
 }
